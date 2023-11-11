@@ -1,0 +1,92 @@
+body {
+    background: url('NumberPlate_image/bg_image.jpg') no-repeat center center/cover;
+    width: 100%;
+}
+
+.about {
+    background: url('NumberPlate_image/bg_image.webp') no-repeat center center/cover;
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-label {
+    color: white;
+    font-size: 1.5rem;
+}
+
+h1 {
+    color: white;
+}
+
+.text-center {
+    margin-top: 3%;
+    color: rgb(233, 229, 4);
+}
+
+/* Define the animation */
+@keyframes textAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the h1 tag */
+.text-center {
+    animation: textAnimation 4s ease-in-out infinite;
+}
+
+/* ---------------------------------Home Icon */
+#home_icon {
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 1.4rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#map_ {
+    border: 3px solid white;
+    left: 25%;
+    padding: 20px;
+
+}
+
+
+.address-info {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.info-item p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Hover effect for icons */
+.info-item i:hover {
+    color: #ff5733;
+}

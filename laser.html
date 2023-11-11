@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laser_Works</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 class="text-center">LASER WORKS</h1>
+    <div class=" about container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Please Choose Your Search Category :</label>
+                        <select id="category" class="form-select">
+                            <option value="number_plates">Number Plates</option>
+                            <option value="stickering">Stickering Works</option>
+                            <option value="acrylic">Acrylic Works</option>
+                            <option value="laser">Laser Works</option>
+                            <option value="steel">Steel Letters</option>
+                        </select>
+                    </div>
+                    <a id="nextLink" class="btn btn-primary" href="#">Next</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row" id="image-container">
+            <!-- Cards will be dynamically generated here -->
+        </div>
+    </div>
+    <script>
+        var imageContainer = document.getElementById("image-container");
+        var imageFolderPath = 'Laser_images/'; // Change this to the path of your image folder
+
+        // Fetch the list of image files in the folder
+        fetch(imageFolderPath)
+            .then(response => response.text())
+            .then(data => {
+                // Use regular expressions to extract image file names
+                var imageFiles = data.match(/href="([^"]+\.(jpg|jfif|jpeg|png|gif|bmp|webp))"/g);
+
+                if (imageFiles) {
+                    imageFiles.forEach(function (imageFile) {
+                        // Extract the filename from the href attribute
+                        var fileName = imageFile.match(/href="([^"]+\.(jpg|jfif|jpeg|png|gif|bmp|webp))"/)[1];
+
+                        // Create a Bootstrap card
+                        var cardColumn = document.createElement('div');
+                        cardColumn.classList.add('col-md-3'); // Adjust the number of columns per row
+
+                        var card = document.createElement('div');
+                        card.classList.add('card', 'mb-4', 'shadow-sm');
+
+                        var img = document.createElement('img');
+                        img.src = imageFolderPath + fileName;
+                        img.classList.add('card-img-top', 'img-card'); // Apply your custom card image class
+                        //img.alt = fileName;
+
+                        var cardBody = document.createElement('div');
+                        cardBody.classList.add('card-body');
+
+                        var cardTitle = document.createElement('h5');
+                        //cardTitle.classList.add('card-title');
+                       // cardTitle.textContent = fileName;
+
+                        cardBody.appendChild(cardTitle);
+
+                        card.appendChild(img);
+                        card.appendChild(cardBody);
+                        cardColumn.appendChild(card);
+                        imageContainer.appendChild(cardColumn);
+                    });
+                }
+            })
+            .catch(error => console.error(error));
+    </script>
+    <script src="script.js"></script>
+
+</html>

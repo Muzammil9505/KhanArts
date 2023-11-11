@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Khans's Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- -------------------------nav bar---------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><B> KHAN ARTS</B></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#category">Category</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>
+        <center>KHANS ARTS</center>
+    </h1>
+    <!-- -------------------------------About Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Left Side (Information) -->
+            <div style="color: white;" class="col-md-6">
+                <h2>About the Proprietor</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor est in nunc feugiat,
+                    eget posuere justo bibendum. Sed mattis arcu quis ligula condimentum auctor.
+                    Fusce vel suscipit velit. Nulla facilisi. Integer nec odio a elit lacinia pellentesque in non urna.
+                </p>
+                <p>
+                    Nulla facilisi. Integer nec odio a elit lacinia pellentesque in non urna. Sed mattis arcu quis
+                    ligula
+                    condimentum auctor.
+                </p>
+            </div>
+
+            <!-- Right Side (Image) -->
+            <div class="col-md-6">
+                <img src="boy.png" width="150px" alt="Proprietor Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------Category section---------------------- -->
+    <div class=" about container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Please Choose Your Search Category :</label>
+                        <select id="category" class="form-select">
+                            <option value="number_plates">Number Plates</option>
+                            <option value="stickering">Stickering Works</option>
+                            <option value="acrylic">Acrylic Works</option>
+                            <option value="laser">Laser Works</option>
+                            <option value="steel">Steel Letters</option>
+                        </select>
+                    </div>
+                    <a id="nextLink" class="btn btn-primary" href="#">Next</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------Contact section--------------------- -->
+
+
+    <div class="container my-5">
+        <div class="column">
+            <!-- Left Side (Location Map) -->
+            <div id="map_" class="col-md-6">
+                <!-- Insert your Google Maps iframe here -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1699377306283!5m2!1sen!2sin!6m8!1m7!1s2TeYss4nqiZkd09_24dCHQ!2m2!1d13.56529997278905!2d78.49944740211775!3f98.15741141853947!4f-0.9171820553854388!5f0.7820865974627469"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Right Side (Address and Contact Info) -->
+            <!-- Right Side (Address, Mobile Number, and Email) -->
+            <div class="col-md-5">
+                <div class="address-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker"></i>
+                        <p>123 Main Street,<br>City, Country</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
